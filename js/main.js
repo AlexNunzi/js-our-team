@@ -5,6 +5,7 @@
 // Scott Estrada	Developer	scott-estrada-developer.jpg
 // Barbara Ramos	Graphic Designer	barbara-ramos-graphic-designer.jpg
 
+const mainDom = document.getElementById('main');
 
 const membersList= [
     {
@@ -44,9 +45,12 @@ console.log("Larray di oggetti creato è:", membersList);
 for(i=0; i< membersList.length; i++){
     
     console.log(`Il ${i + 1}° oggetto contiene le seguenti coppie chiave/valore`)
-
+    let memberInfo = document.createElement('p');
+    memberInfo.innerHTML += `Il ${i + 1}° membro del team è:<br />`
     for(let key in membersList[i]){
         console.log(`${key}: `,membersList[i][key]);
+        memberInfo.innerHTML += `${key}: ${membersList[i][key]} <br />`;
     }
+    mainDom.append(memberInfo);
 
 }
