@@ -40,7 +40,7 @@ const membersList= [
     }
 ]
 
-console.log("Larray di oggetti creato è:", membersList);
+console.log("L'array di oggetti creato è:", membersList);
 
 for(i=0; i< membersList.length; i++){
     
@@ -49,7 +49,11 @@ for(i=0; i< membersList.length; i++){
     memberInfo.innerHTML += `Il ${i + 1}° membro del team è:<br />`
     for(let key in membersList[i]){
         console.log(`${key}: `,membersList[i][key]);
-        memberInfo.innerHTML += `${key}: ${membersList[i][key]} <br />`;
+        if(key == 'immagine del profilo'){
+            memberInfo.innerHTML += `<img src="img/${membersList[i][key]}" alt="Profile image"><br />`;
+        } else{
+            memberInfo.innerHTML += `${key}: ${membersList[i][key]} <br />`;
+        }
     }
     mainDom.append(memberInfo);
 
