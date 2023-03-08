@@ -41,3 +41,12 @@ const membersList= [
 
 console.log("Larray di oggetti creato è:", membersList);
 
+for(i=0; i< membersList.length; i++){
+    
+    console.log(`Il ${i + 1}° oggetto contiene le seguenti coppie chiave/valore`)
+
+    for(let key in membersList[i]){
+        console.log(`${key}: `,membersList[i][key]);
+    }
+
+}
