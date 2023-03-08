@@ -5,8 +5,6 @@
 // Scott Estrada	Developer	scott-estrada-developer.jpg
 // Barbara Ramos	Graphic Designer	barbara-ramos-graphic-designer.jpg
 
-const mainDom = document.getElementById('main');
-
 const membersList= [
     {
         'nome completo': 'Wayne Barnett',
